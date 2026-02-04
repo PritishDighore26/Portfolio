@@ -1,0 +1,190 @@
+/* =========================
+   NAVBAR WRAPPER (ONLY CENTER)
+========================= */
+.navbar {
+  position: fixed;
+  top: 15px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  z-index: 100;
+}
+
+
+/* =========================
+   MAIN WHITE CAPSULE
+   (logo + nav inside)
+========================= */
+.nav-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+
+  padding: 8px 28px;
+
+  background: #ffffff;
+  border-radius: 250px;
+
+  box-shadow:
+    0 25px 50px rgba(0,0,0,0.10),
+    0 10px 20px rgba(0,0,0,0.05);
+}
+
+
+/* =========================
+   BRAND (LEFT SIDE)
+========================= */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding-right: 18px;
+  border-right: 1px solid #eee; /* clean divider */
+}
+
+.brand-logo {
+  width: 45px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+  background:linear-gradient(145deg,#004fff,#00128F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+
+/* =========================
+   NAV ITEMS WRAPPER
+========================= */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+/* =========================
+   BUTTON STYLE
+========================= */
+.pill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  height: 48px;
+
+  border: none;
+  background: transparent;
+
+  border-radius: 20px;
+
+  cursor: pointer;
+
+  color: #001eff;
+  font-size: 12px;
+  font-weight: 500;
+
+  transition: all 0.25s ease;
+}
+
+
+/* icon */
+.icon {
+  font-size: 14px;
+}
+
+
+/* hover */
+.pill-item:hover {
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   ACTIVE BUTTON
+========================= */
+.pill-item.active {
+  background: linear-gradient(145deg,#004fff,#00128F);
+  color: white;
+
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.pill-item.active .icon {
+  color: white;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 900px) {
+  .nav-pill {
+    padding: 8px 16px;
+    gap: 18px;
+  }
+
+  .brand-name {
+    display: none; /* hide text on small screens */
+  }
+
+  .pill-item {
+    width: 70px;
+    height: 42px;
+  }
+}
+
+
+/* =========================
+   MORE MENU
+========================= */
+.more-wrapper {
+  position: relative;
+}
+
+.more-menu {
+  position: absolute;
+  top: 65px;
+  right: 0;
+
+  background: white;
+  border-radius: 14px;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  background: transparent;
+
+  padding: 8px 12px;
+  border-radius: 10px;
+
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: #f2f2f2;
+}
