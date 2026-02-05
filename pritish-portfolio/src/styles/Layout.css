@@ -1,0 +1,286 @@
+/* =========================
+   LAYOUT WRAPPER
+========================= */
+.layout-wrapper {
+  display: flex;      /* ⭐ important for sticky */
+  gap: 40px;
+
+  width: 90%;
+  min-height: 100vh;
+  padding: 30px 40px 40px; /* space for navbar */
+}
+
+
+/* =========================
+   MAIN CONTENT (RIGHT SIDE SCROLLS)
+========================= */
+.main-content {
+  
+  flex: 1;   /* take remaining space */
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================
+   FIXED SIDEBAR CARD (NO SCROLL)
+========================= */
+.sidebar-card {
+  position: sticky;   /* ⭐ THE MAGIC */
+  top: 90px;         /* space below navbar */
+
+  width: 240px;
+  /* width: 320px; */
+  flex-shrink: 0;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+  height: 360px;
+}
+
+/* =========================
+   CARD IMAGE
+========================= */
+.card-image-wrapper {
+  position: relative;
+  width: 90%;
+  aspect-ratio: 1;
+ 
+  margin: 0 auto; 
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  
+  filter: brightness(0.9);
+}
+
+/* =========================
+   CARD INFO
+========================= */
+.card-name {
+  margin: 0;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+
+  /* Gradient text */
+  background: linear-gradient(145deg, #6193ff, #0022ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  text-align: center;
+  line-height: 1.2;
+}
+
+
+.card-description {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  
+  text-align: center;
+  padding: 5px ;
+}
+
+
+/* =========================
+   CARD SOCIALS
+========================= */
+.card-socials {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-icon-btn {
+  width: 44px;
+  height: 44px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  
+  color:  #0022ff;
+  font-size: 18px;
+  
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.social-icon-btn:hover {
+  background:  #0022ff;
+  color: white;
+  border-color:  #0022ff;
+  transform: translateY(-4px);
+}
+
+
+
+/* =========================
+   TABLET (1024px and below)
+========================= */
+@media (max-width: 1024px) {
+
+  .layout-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;               /* ⭐ reduce huge gap */
+    padding: 20px;           /* ⭐ remove extra side padding */
+    margin: auto;
+  }
+
+  .sidebar-card {
+    position: relative;
+    height: auto;      
+    min-height: unset; /* ⭐ remove forced height */
+
+    width: 100%;
+    max-width: 380px;
+
+    margin: 40px auto 10px;  /* ⭐ tighter spacing */
+
+    border-radius: 20px;
+    padding: 26px 22px;
+  }
+
+  .main-content {
+    width: 100%;
+    margin-top: 90px;   
+  }
+
+  .card-image-wrapper {
+    width: 40%;          /* ⭐ responsive */
+  max-width: 180px;    /* ⭐ stop getting too big */
+  aspect-ratio: 1;     /* ⭐ perfect square */
+  }
+
+  .card-name,
+  .card-description {
+    text-align: center;
+  }
+
+  .card-socials {
+    justify-content: center;
+  }
+}
+
+
+
+/* =========================
+   MOBILE (768px and below)
+========================= */
+@media (max-width: 768px) {
+
+  .layout-wrapper {
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+    padding: 16px;
+  }
+
+  .sidebar-card {
+    width: 95%;
+    max-width: 300px;
+    height: auto;
+min-height: unset;
+
+    
+    margin: 20px auto 0;     /* ⭐ sits right below navbar */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 24px 18px;
+  }
+
+  .main-content {
+    margin-top: 90px;           /* ⭐ remove gap above home */
+  }
+
+  .card-image-wrapper {
+    width: 45%;
+  max-width: 160px;
+  aspect-ratio: 1;
+  }
+
+  .card-name {
+    font-size: 18px;
+  }
+
+  .card-description {
+    font-size: 12px;
+  }
+
+  .card-socials {
+    justify-content: center;
+  }
+}
+
+
+
+/* =========================
+   SMALL MOBILE (480px and below)
+========================= */
+@media (max-width: 480px) {
+
+  .layout-wrapper {
+    padding: 12px;
+  }
+
+  .sidebar-card {
+    width: 100%;
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+
+  .card-image-wrapper {
+     width: 50%;
+  max-width: 130px;
+  aspect-ratio: 1;
+  }
+
+  .card-name {
+    font-size: 16px;
+  }
+
+  .card-description {
+    font-size: 11px;
+  }
+}
+
+
+
+/* =========================
+   SAFETY
+========================= */
+@media (max-width: 768px) {
+  .sidebar-card {
+    position: relative !important;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/Navbar.css'
-import logo from '../assets/logo2.png'
+import logo from '../assets/logo6.png'
 
 import {
   FiHome, FiUser, FiBriefcase, FiFolder,
@@ -41,7 +41,6 @@ export default function Navbar() {
         {/* ===== LEFT BRAND INSIDE PILL ===== */}
         <div className="brand">
           <img src={logo} alt="logo" className="brand-logo" />
-          <span className="brand-name"><b>Pritish Dighore</b></span>
         </div>
 
         {/* ===== RIGHT NAV ITEMS ===== */}
