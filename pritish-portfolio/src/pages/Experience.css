@@ -1,0 +1,247 @@
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+.about-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 60px;
+}
+
+.experience-title {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  text-align: center;
+  color: var(--text);
+}
+
+
+/* =========================
+   TIMELINE WRAPPER
+========================= */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding: 20px 0;
+}
+
+
+/* vertical line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg,var(--primary), transparent);
+}
+
+
+/* =========================
+   TIMELINE ITEM
+========================= */
+.timeline-item {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 28px;
+  padding: 24px 0;
+  position: relative;
+}
+
+
+/* marker */
+.timeline-marker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  background: var(--card);
+  border: 3px solid var(--primary);
+  box-shadow: var(--shadow-lg);
+  transition: all 0.25s ease;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--primary);
+  font-size: 16px;
+}
+
+
+.timeline-item:hover .timeline-marker {
+  background: var(--primary);
+  box-shadow: 0 0 0 4px rgba(0, 34, 255, 0.2);
+  transform: scale(1.15);
+}
+
+
+/* =========================
+   CONTENT CARD
+========================= */
+.timeline-content {
+  padding: 16px 24px;
+
+  background: var(--bg);
+  border-radius: 8px;
+
+  border-left: 3px solid var(--border);
+
+  box-shadow: var(--shadow-lg);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.timeline-item:hover .timeline-content {
+  border-left-color: var(--primary);
+  background: var(--bg);
+}
+
+
+/* =========================
+   TEXT
+========================= */
+.timeline-year {
+  display: block;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.timeline-role {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.timeline-company {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.timeline-description {
+  margin: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  color: var(--secondary-text);
+  line-height: 1.6;
+}
+
+
+
+/* =========================================
+   📱 TABLET (1024px and below)
+========================================= */
+@media (max-width: 1024px) {
+
+  .experience-title {
+    font-size: 32px;
+  }
+
+  .timeline-item {
+    gap: 20px;
+  }
+
+  .timeline-content {
+    padding: 14px 20px;
+  }
+}
+
+
+
+/* =========================================
+   📱 MOBILE (768px and below)
+========================================= */
+@media (max-width: 768px) {
+
+  .timeline::before {
+    left: 14px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 28px 1fr;
+    gap: 16px;
+    padding: 18px 0;
+  }
+
+  .timeline-marker {
+    width: 28px;
+    height: 28px;
+    border-width: 2px;
+  }
+
+  .timeline-content {
+    padding: 12px 16px;
+  }
+
+  .timeline-role {
+    font-size: 16px;
+  }
+
+  .timeline-description {
+    font-size: 13px;
+  }
+}
+
+
+
+/* =========================================
+   📱 SMALL MOBILE (480px and below)
+========================================= */
+@media (max-width: 480px) {
+
+  .experience-title {
+    font-size: 24px;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 20px 1fr;
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .timeline-marker {
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-content {
+    padding: 10px 12px;
+  }
+
+  .timeline-year {
+    font-size: 10px;
+  }
+
+  .timeline-role {
+    font-size: 14px;
+  }
+
+  .timeline-company {
+    font-size: 12px;
+  }
+
+  .timeline-description {
+    font-size: 12px;
+  }
+
+}

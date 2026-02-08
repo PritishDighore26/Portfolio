@@ -1,6 +1,6 @@
 import React from 'react'
-import '../styles/Footer.css'
-import logo from '../assets/logo6.png'
+import '../components/Footer.css'
+import logo from '../assets/logo.png'
 
 import {
   FiGithub,
@@ -32,7 +32,7 @@ export default function Footer() {
         {/* MIDDLE SECTION: CREDIT */}
         <div className="footer-middle">
           <p className="footer-credit">
-            Built with <span className="heart">❤️</span> using <span className="tech-highlight">ReactJs</span>
+            Crafted with <span className="heart">❤️</span> using <span className="tech-highlight">React.js & Vite</span>
           </p>
         </div>
         <p className="footer-copyright">

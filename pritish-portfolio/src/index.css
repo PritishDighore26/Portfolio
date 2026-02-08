@@ -1,0 +1,58 @@
+/* =========================
+   THEME VARIABLES
+========================= */
+
+/* Light */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --card: #ffffff;
+  --soft: #f5f7ff;
+  --primary: #0022ff;
+  --secondary-text: #666;
+  --border: #eee;
+
+  --shadow-lg: 0 25px 50px rgba(0,0,0,0.10),
+               0 10px 20px rgba(0,0,0,0.05);
+
+  --shadow-md: 0 8px 18px rgba(0,0,0,0.18);
+
+  --shadow-soft: 0 6px 18px rgba(0,0,0,0.08);
+--shadow-hover: 0 12px 28px rgba(0,0,0,0.15);
+
+}
+
+/* Dark */
+.dark {
+  --bg: #0f172a;
+  --text: #f1f5f9;
+  --card: #0d1627;
+  --soft: #182133;
+  --primary: #0022ff;
+  --secondary-text: #cbd5e1;
+  --border: #334155;
+
+   /* softer shadows for dark */
+  --shadow-lg: 0 10px 25px rgba(77, 77, 77, 0.45);
+  --shadow-md: 0 6px 14px rgba(0, 0, 0, 0.35);
+
+  --shadow-soft: 0 6px 18px rgba(0,0,0,0.35);
+--shadow-hover: 0 10px 22px rgba(0,0,0,0.55);
+
+}
+
+/* Apply globally */
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* if navbar hides content */
+section {
+  scroll-margin-top: 30px;
+}

@@ -1,5 +1,5 @@
 /* =========================
-   NAVBAR WRAPPER (ONLY CENTER)
+   NAVBAR WRAPPER
 ========================= */
 .navbar {
   position: fixed;
@@ -14,8 +14,7 @@
 
 
 /* =========================
-   MAIN WHITE CAPSULE
-   (logo + nav inside)
+   MAIN CAPSULE
 ========================= */
 .nav-pill {
   display: flex;
@@ -23,20 +22,18 @@
   justify-content: space-between;
 
   gap: 35px;
-
   padding: 8px 28px;
 
-  background: #ffffff;
+  background: var(--card);
   border-radius: 250px;
 
-  box-shadow:
-    0 25px 50px rgba(0,0,0,0.10),
-    0 10px 20px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
 }
 
 
 /* =========================
-   BRAND (LEFT SIDE)
+   BRAND
 ========================= */
 .brand {
   display: flex;
@@ -44,7 +41,7 @@
   gap: 10px;
 
   padding-right: 18px;
-  border-right: 1px solid #eee; /* clean divider */
+  border-right: 1px solid var(--border);
 }
 
 .brand-logo {
@@ -52,7 +49,6 @@
   height: auto;
   object-fit: contain;
 }
-
 
 
 /* =========================
@@ -79,26 +75,21 @@
 
   border: none;
   background: transparent;
-
   border-radius: 50px;
 
   cursor: pointer;
 
-  color: #0022ff;
+  color: var(--primary);
   font-size: 12px;
   font-weight: 500;
 
   transition: all 0.25s ease;
 }
 
-
-/* icon */
 .icon {
   font-size: 14px;
 }
 
-
-/* hover */
 .pill-item:hover {
   transform: translateY(-2px);
 }
@@ -108,10 +99,10 @@
    ACTIVE BUTTON
 ========================= */
 .pill-item.active {
-  background: linear-gradient(145deg,#6193ff,#0022ff);
+  background: var(--primary);
   color: white;
 
-  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  box-shadow: var(--shadow-md);
 }
 
 .pill-item.active .icon {
@@ -120,21 +111,55 @@
 
 
 /* =========================
+   THEME TOGGLE
+========================= */
+.theme-toggle {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  border: 1px solid var(--border);
+
+  background: var(--soft);
+  color: var(--primary);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  font-size: 18px;
+
+  transition: all 0.25s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+
+/* =========================
    MOBILE
 ========================= */
-@media (max-width: 900px) {
+@media (max-width: 700px) {
+    
   .nav-pill {
     padding: 8px 16px;
-    gap: 18px;
+    gap: 1px;
   }
-
-  .brand-name {
-    display: none; /* hide text on small screens */
-  }
-
+.icon {
+  font-size: 13px;
+}
+.label{
+  font-size: 10px;
+}
   .pill-item {
-    width: 70px;
+    width: 60px;
     height: 42px;
+  }
+  .navbar{
+    justify-content: center;
   }
 }
 
@@ -151,7 +176,7 @@
   top: 65px;
   right: 0;
 
-  background: white;
+  background: var(--card);
   border-radius: 14px;
   padding: 8px;
 
@@ -159,7 +184,7 @@
   flex-direction: column;
   gap: 6px;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-md);
 }
 
 .dropdown-item {
@@ -174,8 +199,12 @@
   border-radius: 10px;
 
   cursor: pointer;
+
+  color: var(--text);
 }
 
 .dropdown-item:hover {
-  background: #f2f2f2;
+  background: var(--soft);
 }
+
+

@@ -1,12 +1,13 @@
 import React from 'react'
-import '../styles/Home.css'
-import profileImage from '../assets/profile.jpeg' // Add your profile image
+import '../pages/Home.css'
+import profileImage from '../assets/profile.jpeg'
 
 import {
   FiArrowRight,
   FiDownload,
   FiExternalLink,
 } from 'react-icons/fi'
+import { FiGithub, FiTwitter, FiInstagram, FiLinkedin } from 'react-icons/fi'
 
 export default function Home() {
   const scrollToSection = (id) => {
@@ -15,12 +16,12 @@ export default function Home() {
   }
 
   return (
-    <section className="home">
+    <section id= "home" className="home">
       <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fugaz+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
 
       <div className="home-container">
         
-        {/* LEFT CONTENT */}
+        {/* RIGHT CONTENT */}
         <div className="home-content">
 
           {/* HEADLINE */}
@@ -32,8 +33,14 @@ export default function Home() {
 
           {/* DESCRIPTION */}
           <p className="home-description">
-            Crafting beautiful, functional digital experiences with modern web technologies. 
-            Specializing in React, Node.js, and creating scalable applications that users love.
+            I’m a passionate Full Stack Developer focused on building clean, scalable, and user-friendly web applications.
+
+I work with Java, Spring Boot, React, MySQL, and modern web technologies to develop end-to-end solutions that solve real-world problems.
+
+I enjoy turning ideas into functional products, optimizing performance, and writing maintainable code.
+
+Currently, I’m strengthening my skills through hands-on projects and looking for opportunities where I can contribute, learn fast, and grow as a developer.
+
           </p>
 
           {/* CTA BUTTONS */}
@@ -50,6 +57,18 @@ export default function Home() {
 
         </div>
       </div>
+
+      {/* FLOATING BADGES */}
+      {/* <div className="floating-badge badge-top">
+        <span className="badge-icon">✨</span>
+        <span>Always Learning</span>
+      </div>
+
+      <div className="floating-badge badge-bottom">
+        <span className="badge-icon">🚀</span>
+        <span>Open for Opportunities</span>
+      </div> */}
+
     </section>
   )
 }

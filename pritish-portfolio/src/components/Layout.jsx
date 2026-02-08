@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/Layout.css'
+import '../components/Layout.css'
 import profileImage from '../assets/profile.jpeg'
 
 import {

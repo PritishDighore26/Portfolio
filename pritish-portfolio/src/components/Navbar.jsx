@@ -1,27 +1,48 @@
 import React, { useState, useEffect } from 'react'
-import '../styles/Navbar.css'
-import logo from '../assets/logo6.png'
+import '../components/Navbar.css'
+import logo from '../assets/logo.png'
 
 import {
-  FiHome, FiUser, FiBriefcase, FiFolder,
-  FiCpu, FiBook, FiMail, FiMoreHorizontal
+  FiMoon,
+  FiSun,
+  FiHome,
+  FiUser,
+  FiBriefcase,
+  FiFolder,
+  FiCpu,
+  FiBook,
+  FiMail,
+  FiMoreHorizontal,
 } from 'react-icons/fi'
 
 export default function Navbar() {
   const [activeNav, setActiveNav] = useState('Home')
   const [showMore, setShowMore] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900)
+  const [dark, setDark] = useState(false)
 
+  /* ================= THEME ================= */
+  useEffect(() => {
+    document.body.classList.toggle('dark', dark)
+    localStorage.setItem('theme', dark ? 'dark' : 'light')
+  }, [dark])
+
+  useEffect(() => {
+    const saved = localStorage.getItem('theme')
+    if (saved === 'dark') setDark(true)
+  }, [])
+
+  /* ================= RESPONSIVE ================= */
   useEffect(() => {
     const resize = () => setIsMobile(window.innerWidth < 900)
     window.addEventListener('resize', resize)
     return () => window.removeEventListener('resize', resize)
   }, [])
 
+  /* ================= NAV ITEMS ================= */
   const navItems = [
-    { label: 'Home', icon: <FiHome /> },
-    { label: 'About', icon: <FiUser /> },
-    { label: 'Experience', icon: <FiBriefcase /> },
+    { label: 'Home', id: 'home',icon: <FiHome /> },
+    { label: 'Experience',id:'experience', icon: <FiBriefcase /> },
     { label: 'Projects', icon: <FiFolder /> },
     { label: 'Skills', icon: <FiCpu /> },
     { label: 'Education', icon: <FiBook /> },
@@ -31,32 +52,56 @@ export default function Navbar() {
   const visibleItems = isMobile ? navItems.slice(0, 3) : navItems
   const hiddenItems = navItems.slice(3)
 
+  const scrollToSection = (id, label) => {
+  const section = document.getElementById(id)
+
+  if (section) {
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
+
+  setActiveNav(label)
+}
+
   return (
     <nav className="navbar">
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fugaz+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fugaz+One&family=Roboto+Condensed:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
 
-      {/* ONE capsule only */}
       <div className="nav-pill">
-
-        {/* ===== LEFT BRAND INSIDE PILL ===== */}
+        {/* BRAND */}
         <div className="brand">
           <img src={logo} alt="logo" className="brand-logo" />
         </div>
 
-        {/* ===== RIGHT NAV ITEMS ===== */}
+        {/* NAV ITEMS */}
         <div className="nav-items">
-
           {visibleItems.map((item) => (
             <button
               key={item.label}
-              onClick={() => setActiveNav(item.label)}
-              className={`pill-item ${activeNav === item.label ? 'active' : ''}`}
+              onClick={() => scrollToSection(item.id, item.label)}
+              className={`pill-item ${
+                activeNav === item.label ? 'active' : ''
+              }`}
             >
               <span className="icon">{item.icon}</span>
               <span className="label">{item.label}</span>
             </button>
           ))}
 
+          {/* THEME TOGGLE */}
+          <button
+            className="theme-toggle"
+            onClick={() => setDark(!dark)}
+          >
+            {dark ? <FiSun /> : <FiMoon />}
+          </button>
+
+          {/* MOBILE MORE */}
           {isMobile && (
             <div className="more-wrapper">
               <button
@@ -73,7 +118,7 @@ export default function Navbar() {
                     <button
                       key={item.label}
                       onClick={() => {
-                        setActiveNav(item.label)
+                        scrollToSection(item.id, item.label)
                         setShowMore(false)
                       }}
                       className="dropdown-item"
@@ -86,7 +131,6 @@ export default function Navbar() {
               )}
             </div>
           )}
-
         </div>
       </div>
     </nav>
