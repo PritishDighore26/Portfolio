@@ -6,6 +6,7 @@ import Layout from '../src/components/Layout'
 
 import Home from '../src/pages/Home'
 import Experience from './pages/Experience'
+import Project from './pages/Project'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
     <Layout>
       <Home />
       <Experience />
+      <Project/>
     </Layout>
     <Footer />
   </>

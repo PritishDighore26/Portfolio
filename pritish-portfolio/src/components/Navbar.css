@@ -21,11 +21,11 @@
   align-items: center;
   justify-content: space-between;
 
-  gap: 35px;
-  padding: 8px 28px;
+  gap: 24px;
+  padding: 8px 22px;
 
   background: var(--card);
-  border-radius: 250px;
+  border-radius: 999px;
 
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(10px);
@@ -38,15 +38,13 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
 
-  padding-right: 18px;
+  padding-right: 16px;
   border-right: 1px solid var(--border);
 }
 
 .brand-logo {
-  width: 45px;
-  height: auto;
+  width: 42px;
   object-fit: contain;
 }
 
@@ -62,7 +60,7 @@
 
 
 /* =========================
-   BUTTON STYLE
+   NAV BUTTONS
 ========================= */
 .pill-item {
   display: flex;
@@ -70,12 +68,13 @@
   align-items: center;
   justify-content: center;
 
-  width: 90px;
-  height: 48px;
+  min-width: 70px;
+  padding: 6px 10px;
+  height: 44px;
 
   border: none;
-  background: transparent;
   border-radius: 50px;
+  background: transparent;
 
   cursor: pointer;
 
@@ -83,11 +82,15 @@
   font-size: 12px;
   font-weight: 500;
 
-  transition: all 0.25s ease;
+  transition: 0.2s ease;
 }
 
 .icon {
   font-size: 14px;
+}
+
+.label {
+  font-size: 11px;
 }
 
 .pill-item:hover {
@@ -96,17 +99,12 @@
 
 
 /* =========================
-   ACTIVE BUTTON
+   ACTIVE
 ========================= */
 .pill-item.active {
   background: var(--primary);
-  color: white;
-
+  color: #fff;
   box-shadow: var(--shadow-md);
-}
-
-.pill-item.active .icon {
-  color: white;
 }
 
 
@@ -114,8 +112,8 @@
    THEME TOGGLE
 ========================= */
 .theme-toggle {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
 
   border-radius: 50%;
   border: 1px solid var(--border);
@@ -127,40 +125,14 @@
   align-items: center;
   justify-content: center;
 
-  cursor: pointer;
   font-size: 18px;
+  cursor: pointer;
 
-  transition: all 0.25s ease;
+  transition: 0.2s ease;
 }
 
 .theme-toggle:hover {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 700px) {
-    
-  .nav-pill {
-    padding: 8px 16px;
-    gap: 1px;
-  }
-.icon {
-  font-size: 13px;
-}
-.label{
-  font-size: 10px;
-}
-  .pill-item {
-    width: 60px;
-    height: 42px;
-  }
-  .navbar{
-    justify-content: center;
-  }
 }
 
 
@@ -173,16 +145,16 @@
 
 .more-menu {
   position: absolute;
-  top: 65px;
+  top: 60px;
   right: 0;
 
   background: var(--card);
-  border-radius: 14px;
-  padding: 8px;
+  border-radius: 12px;
+  padding: 6px;
 
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 
   box-shadow: var(--shadow-md);
 }
@@ -192,15 +164,14 @@
   align-items: center;
   gap: 8px;
 
-  border: none;
-  background: transparent;
-
   padding: 8px 12px;
   border-radius: 10px;
 
-  cursor: pointer;
+  background: transparent;
+  border: none;
 
   color: var(--text);
+  cursor: pointer;
 }
 
 .dropdown-item:hover {
@@ -208,3 +179,25 @@
 }
 
 
+/* =========================
+   MOBILE (match JS: 900px)
+========================= */
+@media (max-width: 900px) {
+  .nav-pill {
+    gap: 8px;
+    padding: 6px 14px;
+  }
+
+  .pill-item {
+    min-width: 56px;
+    height: 40px;
+  }
+
+  .icon {
+    font-size: 13px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+}

@@ -148,11 +148,13 @@
     gap: 20px;
     padding: 20px;
     margin: auto;
+    /* overflow: hidden; */
   }
 
   .sidebar-card {
     position: relative;
     height: auto;
+    
     min-height: unset;
 
     width: 100%;

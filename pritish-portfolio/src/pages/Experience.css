@@ -1,11 +1,11 @@
 /* =========================
    EXPERIENCE SECTION
 ========================= */
-.about-experience {
+.my-experience {
   display: flex;
   flex-direction: column;
   gap: 0px;
-  padding: 60px;
+  padding: 30px;
 }
 
 .experience-title {

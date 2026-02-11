@@ -4,14 +4,13 @@
 .home {
   width: 100%;
   min-height: 100vh;
-position: relative;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-flex-direction: column;
+  flex-direction: column;
   background: var(--bg);
   padding: 10px 40px 30px;
-  
 }
 
 
@@ -137,11 +136,33 @@ flex-direction: column;
   font-size: 16px;
 }
 
+@media (max-width: 1024px) {
+  .home {
+    min-height: auto;
+    padding: 20px 20px 30px;
+  }
 
+  .headline-name {
+    font-size: 52px;
+  }
+
+  .headline-title {
+    font-size: 26px;
+  }
+
+  .home-description {
+    font-size: 15px;
+  }
+}
 /* =========================
    RESPONSIVE
 ========================= */
 @media (max-width: 768px) {
+  .home {
+    min-height: auto;
+    padding: 20px 0px 30px;
+  }
+
   .headline-name {
     font-size: 42px;
   }
@@ -166,6 +187,11 @@ flex-direction: column;
 }
 
 @media (max-width: 480px) {
+  .home {
+    min-height: auto;
+    padding: 20px 0px 30px;
+  }
+
   .headline-name {
     font-size: 32px;
   }

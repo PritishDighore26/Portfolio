@@ -24,9 +24,9 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="about-experience">
+    <section id="experience" className="my-experience">
 
-      <h3 className="experience-title">Experience & Training</h3>
+      <h4 className="experience-title">Experience & Training</h4>
 
       <div className="timeline">
 

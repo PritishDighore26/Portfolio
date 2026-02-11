@@ -43,7 +43,7 @@ export default function Navbar() {
   const navItems = [
     { label: 'Home', id: 'home',icon: <FiHome /> },
     { label: 'Experience',id:'experience', icon: <FiBriefcase /> },
-    { label: 'Projects', icon: <FiFolder /> },
+    { label: 'Projects',id:"projects", icon: <FiFolder /> },
     { label: 'Skills', icon: <FiCpu /> },
     { label: 'Education', icon: <FiBook /> },
     { label: 'Contact', icon: <FiMail /> },
