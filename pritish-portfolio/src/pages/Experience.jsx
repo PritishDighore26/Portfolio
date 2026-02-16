@@ -19,7 +19,7 @@ export default function Experience() {
       description: [
       'Completed industry-oriented Full Stack Java training covering Core Java, OOPs, JDBC, Servlets, Spring Boot, Hibernate, REST APIs, MySQL, HTML, CSS, JavaScript, ReactJS, and Angular.',
       'Developed end-to-end full-stack applications from scratch, including database design, backend development, and frontend integration.',
-      'Implemented backend services using Spring Boot with layered architecture (Controllerâ€“Serviceâ€“Repository pattern).',
+      'Implemented backend services using Spring Boot with layered architecture (Controller-Service-Repository pattern).',
       'Followed SDLC and Agile practices used Git for version control and team collaboration.'
     ]
   }

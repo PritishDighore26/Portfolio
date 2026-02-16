@@ -31,13 +31,13 @@ export default function Home() {
 
           {/* DESCRIPTION */}
           <p className="home-description">
-            Iâ€™m a passionate Full Stack Developer focused on building clean, scalable, and user-friendly web applications.
+            I'm a passionate Full Stack Developer focused on building clean, scalable, and user-friendly web applications.
 
 I work with Java, Spring Boot, React, MySQL, and modern web technologies to develop end-to-end solutions that solve real-world problems.
 
 I enjoy turning ideas into functional products, optimizing performance, and writing maintainable code.
 
-Currently, Iâ€™m strengthening my skills through hands-on projects and looking for opportunities where I can contribute, learn fast, and grow as a developer.
+Currently, I'm strengthening my skills through hands-on projects and looking for opportunities where I can contribute, learn fast, and grow as a developer.
 
           </p>
           {/* CTA BUTTONS */}

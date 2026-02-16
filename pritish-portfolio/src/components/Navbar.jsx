@@ -49,8 +49,8 @@ export default function Navbar() {
     { label: 'Contact',id:'contact', icon: <FiMail /> },
   ]
 
-  const visibleItems = isMobile ? navItems.slice(0, 3) : navItems
-  const hiddenItems = navItems.slice(3)
+  const visibleItems = isMobile ? navItems.slice(0, 2) : navItems
+  const hiddenItems = navItems.slice(2)
 
   const scrollToSection = (id, label) => {
   const section = document.getElementById(id)

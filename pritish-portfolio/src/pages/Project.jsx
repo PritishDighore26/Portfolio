@@ -73,12 +73,11 @@ export default function Project() {
     'CSS3',
     'React Router',
     'EmailJS',
-    'Responsive Design',
     'Git'
   ],
   image: portfolioImg,
-  liveLink: '#',
-  githubLink: '#',
+  liveLink: 'https://pritishdighore.netlify.app/',
+  githubLink: 'https://github.com/PritishDighore26/Portfolio',
   problemStatement: 'Design and develop a fast, responsive, and visually appealing portfolio website to professionally showcase projects, technical skills, and achievements.',
   details: 'Built a high-performance personal portfolio website using React with Vite for optimized development and fast build times. Implemented responsive layouts for mobile, tablet, and desktop devices, and dynamic project filtering. Focused on clean UI design, component-based architecture, performance optimization, and modern frontend best practices.'
 }
@@ -97,7 +96,6 @@ export default function Project() {
     'JSON',
     'DOM Manipulation',
     'Form Validation',
-    'Responsive Design'
   ],
   image: foodkingImg,
   liveLink: 'https://pritishdighore26.github.io/FoodKing_OnlineFoodOrderingSystem/',

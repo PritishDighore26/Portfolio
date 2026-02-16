@@ -237,6 +237,7 @@
 
   .layout-wrapper {
     padding: 12px;
+    /* width:auto; */
   }
 
   .sidebar-card {
