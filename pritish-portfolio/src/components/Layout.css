@@ -236,8 +236,8 @@
 @media (max-width: 480px) {
 
   .layout-wrapper {
-    padding: 12px;
-    /* width:auto; */
+    padding: 12px 0px;
+    width:auto;
   }
 
   .sidebar-card {
