@@ -656,9 +656,10 @@
   }
 
   .projects-grid {
+    display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
-    padding: 0 12px;
+    padding: 0 20px;
   }
 
   .project-card {
