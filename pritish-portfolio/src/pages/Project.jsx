@@ -1,5 +1,10 @@
 import React, { useState } from 'react'
 import './Project.css'
+import ridevaImg from "../assets/rideva.png";
+import pakkifyImg from "../assets/pakkify.png";
+import portfolioImg from "../assets/portfolio.png";
+import foodkingImg from "../assets/foodking.png";
+
 import {
   FiExternalLink,
   FiGithub,
@@ -27,7 +32,7 @@ export default function Project() {
     'Postman',
     'Git'
   ],
-  image: 'src/assets/rideva.png',
+  image: ridevaImg,
   liveLink: null,
   githubLink: 'https://github.com/PritishDighore26/RIDEVA-Self-Drive-Vehicle-Renting-System',
   problemStatement: 'Build a scalable vehicle rental system that enables users to search and book self-drive vehicles, owners to manage their fleet, and admins to control and monitor platform activities securely.',
@@ -49,7 +54,7 @@ export default function Project() {
     'Postman',
     'Git'
   ],
-  image: 'src/assets/pakkify.png',
+  image: pakkifyImg,
   liveLink: null,
   githubLink: 'https://github.com/PritishDighore26/PAKKIFY-HandcraftE-CommercePlatform',
   problemStatement: 'Build a scalable e-commerce platform that enables artisans and small business owners to showcase and sell their handcrafted products to a wider audience with secure authentication and product management.',
@@ -71,7 +76,7 @@ export default function Project() {
     'Responsive Design',
     'Git'
   ],
-  image: 'src/assets/portfolio.png',
+  image: portfolioImg,
   liveLink: '#',
   githubLink: '#',
   problemStatement: 'Design and develop a fast, responsive, and visually appealing portfolio website to professionally showcase projects, technical skills, and achievements.',
@@ -94,7 +99,7 @@ export default function Project() {
     'Form Validation',
     'Responsive Design'
   ],
-  image: 'src/assets/foodking.png',
+  image: foodkingImg,
   liveLink: 'https://pritishdighore26.github.io/FoodKing_OnlineFoodOrderingSystem/',
   githubLink: 'https://github.com/PritishDighore26/FoodKing_OnlineFoodOrderingSystem',
   problemStatement: 'Develop a dynamic food ordering website that allows users to browse menu items, add products to cart, and manage orders.',
