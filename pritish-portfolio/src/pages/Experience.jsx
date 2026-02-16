@@ -14,13 +14,15 @@ export default function Experience() {
     {
       icon: <FiCode />,
       year: 'July 2025 - Present',
-      role: 'Full Stack Java Developer Trainee + Intern',
+      role: 'Full Stack Java Developer Trainee',
       company: 'SEED Infotech Ltd',
-      description:
-        'Built CRUD apps, task management systems, Java Swing tools, and improved problem-solving and system design skills.',
-    }
-    
-    
+      description: [
+      'Completed industry-oriented Full Stack Java training covering Core Java, OOPs, JDBC, Servlets, Spring Boot, Hibernate, REST APIs, MySQL, HTML, CSS, JavaScript, ReactJS, and Angular.',
+      'Developed end-to-end full-stack applications from scratch, including database design, backend development, and frontend integration.',
+      'Implemented backend services using Spring Boot with layered architecture (Controllerâ€“Serviceâ€“Repository pattern).',
+      'Followed SDLC and Agile practices used Git for version control and team collaboration.'
+    ]
+  }
   ]
 
   return (
@@ -41,7 +43,12 @@ export default function Experience() {
               <span className="timeline-year">{exp.year}</span>
               <h4 className="timeline-role">{exp.role}</h4>
               <p className="timeline-company">{exp.company}</p>
-              <p className="timeline-description">{exp.description}</p>
+              <ul className="timeline-description">
+  {exp.description.map((point, i) => (
+    <li key={i}>{point}</li>
+  ))}
+</ul>
+
             </div>
 
           </div>

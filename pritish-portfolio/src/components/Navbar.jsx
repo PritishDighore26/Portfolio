@@ -44,9 +44,9 @@ export default function Navbar() {
     { label: 'Home', id: 'home',icon: <FiHome /> },
     { label: 'Experience',id:'experience', icon: <FiBriefcase /> },
     { label: 'Projects',id:"projects", icon: <FiFolder /> },
-    { label: 'Skills', icon: <FiCpu /> },
-    { label: 'Education', icon: <FiBook /> },
-    { label: 'Contact', icon: <FiMail /> },
+    { label: 'Skills',id:'skills', icon: <FiCpu /> },
+    { label: 'Education',id:'education' ,icon: <FiBook /> },
+    { label: 'Contact',id:'contact', icon: <FiMail /> },
   ]
 
   const visibleItems = isMobile ? navItems.slice(0, 3) : navItems

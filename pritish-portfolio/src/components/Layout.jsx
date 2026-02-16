@@ -26,16 +26,16 @@ export default function Layout({ children }) {
 
         {/* SOCIAL LINKS */}
         <div className="card-socials">
-          <a href="#" className="social-icon-btn" title="GitHub">
+          <a href="https://github.com/PritishDighore26" className="social-icon-btn" title="GitHub">
             <FiGithub />
           </a>
-          <a href="#" className="social-icon-btn" title="Twitter">
+          <a href="https://x.com/PritishDighore" className="social-icon-btn" title="Twitter">
             <FiTwitter />
           </a>
-          <a href="#" className="social-icon-btn" title="Instagram">
+          <a href="https://www.instagram.com/pritishdighore26/" className="social-icon-btn" title="Instagram">
             <FiInstagram />
           </a>
-          <a href="#" className="social-icon-btn" title="LinkedIn">
+          <a href="https://www.linkedin.com/in/pritish-dighore-385066245/" className="social-icon-btn" title="LinkedIn">
             <FiLinkedin />
           </a>
         </div>

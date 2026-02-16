@@ -96,7 +96,7 @@
 
 .cta-primary,
 .cta-secondary {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
 
@@ -109,6 +109,8 @@
 
   cursor: pointer;
   transition: 0.25s ease;
+
+   text-decoration: none;
 }
 
 .cta-primary {
@@ -125,6 +127,7 @@
   background: #f3f3f3;
   color: var(--primary);
   border: 1px solid #e0e0e0;
+ 
 }
 
 .cta-secondary:hover {
@@ -179,11 +182,14 @@
     flex-direction: column;
   }
 
-  .cta-primary,
-  .cta-secondary {
+  .cta-primary{
     width: 100%;
     justify-content: center;
   }
+  .cta-secondary {
+width:130px;
+justify-content: center;
+}
 }
 
 @media (max-width: 480px) {
@@ -191,7 +197,10 @@
     min-height: auto;
     padding: 20px 0px 30px;
   }
-
+  .cta-secondary {
+width:130px;
+justify-content: center;
+}
   .headline-name {
     font-size: 32px;
   }

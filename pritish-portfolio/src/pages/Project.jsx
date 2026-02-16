@@ -11,86 +11,95 @@ export default function Project() {
   const [activeFilter, setActiveFilter] = useState('All')
   const [selectedProject, setSelectedProject] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
-
   const projects = [
-    {
-      id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with product management, cart functionality, and secure payment integration.',
-      category: 'FullStack',
-      cardTechnologies: ['React', 'Spring Boot', 'MySQL'],
-      detailTechnologies: ['React', 'Spring Boot', 'MySQL', 'Stripe', 'JWT', 'REST API', 'Postman', 'Git'],
-      image: '🛒',
-      liveLink: '#',
-      githubLink: '#',
-      problemStatement: 'Create a scalable e-commerce platform that allows users to browse, search, and purchase products with secure payment processing.',
-      details: 'This e-commerce platform was built using React for the frontend with a responsive design, Spring Boot backend with RESTful APIs, MySQL database for product and order management, and Stripe integration for secure payment processing. The application includes user authentication, product catalog management, shopping cart functionality, order tracking, and an admin panel for inventory management.',
-    },
-    {
-      id: 2,
-      title: 'Task Management App',
-      description: 'React-based task management application with real-time updates, drag-and-drop functionality, and user authentication.',
-      category: 'Frontend',
-      cardTechnologies: ['React', 'Redux', 'Tailwind CSS'],
-      detailTechnologies: ['React', 'Redux', 'Tailwind CSS', 'Firebase', 'Framer Motion', 'React Beautiful DnD', 'Axios', 'Context API'],
-      image: '✅',
-      liveLink: '#',
-      githubLink: '#',
-      problemStatement: 'Develop a real-time task management tool that allows teams to organize, prioritize, and track project tasks efficiently.',
-      details: 'Built a modern task management application using React and Redux for state management, featuring drag-and-drop task organization, real-time updates with Firebase, user authentication, team collaboration features, and responsive design with Tailwind CSS. Includes task filtering, priority levels, deadline tracking, and team member assignment capabilities.',
-    },
-    {
-      id: 3,
-      title: 'REST API for Blog Platform',
-      description: 'Robust REST API built with Spring Boot for a blog platform with user authentication, post management, and comment system.',
-      category: 'Backend',
-      cardTechnologies: ['Java', 'Spring Boot', 'MySQL'],
-      detailTechnologies: ['Java', 'Spring Boot', 'MySQL', 'JWT', 'Hibernate', 'Lombok', 'Maven', 'JUnit', 'Swagger'],
-      image: '📝',
-      liveLink: '#',
-      githubLink: '#',
-      problemStatement: 'Create a scalable REST API for a blog platform supporting user authentication, content management, and community engagement.',
-      details: 'Developed a comprehensive REST API using Spring Boot with JWT authentication, MySQL database for data persistence, comprehensive blog post management with CRUD operations, comment system for user engagement, user profile management, and role-based access control. Implements pagination, filtering, and search functionality for efficient content discovery.',
-    },
-    {
-      id: 4,
-      title: 'Weather Dashboard',
-      description: 'Interactive weather dashboard displaying real-time weather data with maps, forecasts, and beautiful UI animations.',
-      category: 'Frontend',
-      cardTechnologies: ['React', 'OpenWeather API', 'Chart.js'],
-      detailTechnologies: ['React', 'OpenWeather API', 'Chart.js', 'CSS3', 'Leaflet Maps', 'Axios', 'Redux', 'React Router'],
-      image: '🌤️',
-      liveLink: '#',
-      githubLink: '#',
-      problemStatement: 'Build an interactive weather dashboard that provides real-time weather data with visual representations and forecasting.',
-      details: 'Created an interactive weather dashboard using React and OpenWeather API for real-time data, Chart.js for beautiful weather trend visualizations, responsive design with CSS3 animations, location-based weather information, 7-day forecast, weather alerts, and UV index tracking. Includes dark/light theme toggle and location search functionality.',
-    },
-    {
-      id: 5,
-      title: 'User Management System',
-      description: 'Full-stack application for managing users with role-based access control, dashboard, and comprehensive admin panel.',
-      category: 'FullStack',
-      cardTechnologies: ['React', 'Spring Boot', 'PostgreSQL'],
-      detailTechnologies: ['React', 'Spring Boot', 'PostgreSQL', 'Redis', 'JWT', 'Docker', 'Elasticsearch', 'Kibana', 'Log4j'],
-      image: '👥',
-      liveLink: '#',
-      githubLink: '#',
-      problemStatement: 'Develop a comprehensive user management system with role-based access control and administrative capabilities.',
-      details: 'Built a complete user management system with React frontend and Spring Boot backend, PostgreSQL database for user data storage, Redis caching for performance optimization, role-based access control (RBAC), user authentication and authorization, comprehensive admin dashboard for user management, activity logging, and audit trails.',
-    },
-    {
-      id: 6,
-      title: 'Microservices Architecture',
-      description: 'Scalable microservices setup with Spring Cloud, service discovery, API gateway, and inter-service communication.',
-      category: 'Backend',
-      cardTechnologies: ['Spring Cloud', 'Docker', 'Kubernetes'],
-      detailTechnologies: ['Spring Cloud', 'Docker', 'Kubernetes', 'RabbitMQ', 'Eureka', 'Zuul Gateway', 'Circuit Breaker', 'ELK Stack', 'Prometheus'],
-      image: '🔧',
-      liveLink: '#',
-      githubLink: '#',
-      problemStatement: 'Design and implement a scalable microservices architecture with proper service discovery and inter-service communication.',
-      details: 'Designed and implemented a scalable microservices architecture using Spring Cloud with service discovery using Eureka, API Gateway for routing, inter-service communication with RabbitMQ message broker, containerization with Docker, orchestration with Kubernetes, circuit breaker pattern for resilience, and distributed logging/monitoring solutions.',
-    },
+   {
+  id: 1,
+  title: 'RIDEVA – Self Drive Vehicle Renting System',
+  description: 'A full-stack vehicle rental platform that allows users to book self-drive vehicles, owners to manage fleets, and admins to monitor system operations.',
+  category: 'FullStack',
+  cardTechnologies: ['React', 'Spring Boot', 'MySQL'],
+  detailTechnologies: [
+    'React',
+    'Spring Boot',
+    'Hibernate',
+    'MySQL',
+    'REST API',
+    'Postman',
+    'Git'
+  ],
+  image: 'src/assets/rideva.png',
+  liveLink: null,
+  githubLink: 'https://github.com/PritishDighore26/RIDEVA-Self-Drive-Vehicle-Renting-System',
+  problemStatement: 'Build a scalable vehicle rental system that enables users to search and book self-drive vehicles, owners to manage their fleet, and admins to control and monitor platform activities securely.',
+  details: 'RIDEVA is a full-stack self-drive vehicle renting system developed using React for the frontend and Spring Boot with Hibernate for the backend. The platform supports role-based authentication (Admin, Owner, User). Users can search vehicles based on location, date, and transmission, and manage their bookings. Owners can add, update while Admins can manage users, vehicles, bookings, and monitor system performance. The system uses RESTful APIs for communication and MySQL for persistent data storage.'
+},
+ {
+  id: 2,
+  title: 'PAKKIFY – Handcraft E-Commerce Platform',
+  description: 'A full-stack marketplace platform that empowers artisans and small business owners to sell handcrafted products online.',
+  category: 'FullStack',
+  cardTechnologies: ['Angular', 'Spring Boot', 'MySQL'],
+  detailTechnologies: [
+    'Angular',
+    'Spring Boot',
+    'Hibernate',
+    'MySQL',
+    'REST API',
+    'AngularMaterial',
+    'Postman',
+    'Git'
+  ],
+  image: 'src/assets/pakkify.png',
+  liveLink: null,
+  githubLink: 'https://github.com/PritishDighore26/PAKKIFY-HandcraftE-CommercePlatform',
+  problemStatement: 'Build a scalable e-commerce platform that enables artisans and small business owners to showcase and sell their handcrafted products to a wider audience with secure authentication and product management.',
+  details: 'PAKKIFY is a full-stack e-commerce marketplace developed using Angular for the frontend and Spring Boot with Hibernate for the backend. The platform supports role-based access. Sellers can add, update, and manage products, while buyers can browse, filter, add to cart, and place orders. Admin has full control over users and product moderation. The system uses RESTful APIs for communication, and MySQL for data persistence, ensuring scalability and secure transactions.'
+},
+  {
+  id: 3,
+  title: 'Personal Portfolio Website',
+  description: 'A modern, high-performance portfolio website built with React and Vite to showcase projects, skills, and experience.',
+  category: 'Frontend',
+  cardTechnologies: ['React', 'Vite', 'CSS'],
+  detailTechnologies: [
+    'React',
+    'Vite',
+    'JavaScript',
+    'CSS3',
+    'React Router',
+    'EmailJS',
+    'Responsive Design',
+    'Git'
+  ],
+  image: 'src/assets/portfolio.png',
+  liveLink: '#',
+  githubLink: '#',
+  problemStatement: 'Design and develop a fast, responsive, and visually appealing portfolio website to professionally showcase projects, technical skills, and achievements.',
+  details: 'Built a high-performance personal portfolio website using React with Vite for optimized development and fast build times. Implemented responsive layouts for mobile, tablet, and desktop devices, and dynamic project filtering. Focused on clean UI design, component-based architecture, performance optimization, and modern frontend best practices.'
+}
+,
+   {
+  id: 4,
+  title: 'FoodKing – Online Food Ordering System',
+  description: 'A responsive food ordering website built using HTML, CSS, and JavaScript with cart management using browser LocalStorage.',
+  category: 'Frontend',
+  cardTechnologies: ['HTML5', 'CSS3', 'JavaScript'],
+  detailTechnologies: [
+    'HTML5',
+    'CSS3',
+    'JavaScript',
+    'LocalStorage',
+    'JSON',
+    'DOM Manipulation',
+    'Form Validation',
+    'Responsive Design'
+  ],
+  image: 'src/assets/foodking.png',
+  liveLink: 'https://pritishdighore26.github.io/FoodKing_OnlineFoodOrderingSystem/',
+  githubLink: 'https://github.com/PritishDighore26/FoodKing_OnlineFoodOrderingSystem',
+  problemStatement: 'Develop a dynamic food ordering website that allows users to browse menu items, add products to cart, and manage orders.',
+  details: 'FoodKing is a frontend-based food ordering system developed using HTML, CSS, and JavaScript. The application allows users to browse food items dynamically loaded from a JSON file, add items to cart, update quantities, and remove products. Cart data is stored using browser LocalStorage to maintain persistence across page reloads. The system includes user authentication pages, form validation, responsive UI design, and dynamic DOM manipulation for real-time cart updates.'
+}
   ]
 
   const filters = ['All', 'Frontend', 'Backend', 'FullStack']
@@ -142,23 +151,23 @@ export default function Project() {
               >
                 <FiMoreVertical />
               </button>
-
               {/* PROJECT IMAGE/ICON */}
               <div className="project-image">
-                <span className="project-emoji">{project.image}</span>
+                <img 
+                src={project.image} 
+                alt={project.title} 
+                className="project-img"
+              />
               </div>
-
               {/* PROJECT CONTENT */}
               <div className="project-content">
                 <div className="project-header">
                   <h3 className="project-title">{project.title}</h3>
                   <span className="project-category">{project.category}</span>
                 </div>
-
                 <p className="project-description">
                   {project.description}
                 </p>
-
                 {/* TECHNOLOGIES - CARD VIEW (LIMITED) */}
                 <div className="project-tech">
                   {project.cardTechnologies.map((tech, index) => (
@@ -167,23 +176,35 @@ export default function Project() {
                     </span>
                   ))}
                 </div>
-
                 {/* LINKS */}
                 <div className="project-links">
-                  <a href={project.liveLink} className="project-link live-link">
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link live-link"
+                  >
                     <FiExternalLink className="link-icon" />
                     <span>Live Demo</span>
                   </a>
-                  <a href={project.githubLink} className="project-link github-link">
+                )}
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link github-link"
+                  >
                     <FiGithub className="link-icon" />
                     <span>GitHub</span>
                   </a>
-                </div>
+                )}
+              </div>
               </div>
             </div>
           ))}
         </div>
-
         {/* EMPTY STATE */}
         {filteredProjects.length === 0 && (
           <div className="empty-state">
@@ -191,7 +212,6 @@ export default function Project() {
           </div>
         )}
       </div>
-
       {/* MODAL */}
       {isModalOpen && selectedProject && (
         <div className="modal-overlay" onClick={closeModal}>
@@ -226,15 +246,33 @@ export default function Project() {
               </div>
 
               <div className="modal-links">
-                <a href={selectedProject.liveLink} className="modal-link live-link">
-                  <FiExternalLink />
-                  Live Demo
-                </a>
-                <a href={selectedProject.githubLink} className="modal-link github-link">
-                  <FiGithub />
-                  GitHub
-                </a>
-              </div>
+
+  {selectedProject.liveLink && (
+    <a
+      href={selectedProject.liveLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="modal-link live-link"
+    >
+      <FiExternalLink />
+      Live Demo
+    </a>
+  )}
+
+  {selectedProject.githubLink && (
+    <a
+      href={selectedProject.githubLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="modal-link github-link"
+    >
+      <FiGithub />
+      GitHub
+    </a>
+  )}
+
+</div>
+
             </div>
           </div>
         </div>
