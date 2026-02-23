@@ -6,7 +6,6 @@ import {
   FiMoon,
   FiSun,
   FiHome,
-  FiUser,
   FiBriefcase,
   FiFolder,
   FiCpu,

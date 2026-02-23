@@ -2,13 +2,6 @@ import React from 'react'
 import '../components/Footer.css'
 import logo from '../assets/logo.png'
 
-import {
-  FiGithub,
-  FiLinkedin,
-  FiMail,
-  FiTwitter,
-} from 'react-icons/fi'
-
 export default function Footer() {
   const currentYear = new Date().getFullYear()
 
