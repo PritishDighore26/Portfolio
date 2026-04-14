@@ -6,16 +6,27 @@ import { FiCode } from "react-icons/fi";
 
 export default function Experience() {
 
-  /* 
-    Fresher-friendly timeline
-    Projects > fake company experience
-  */
   const experiences = [
     {
       icon: <FiCode />,
-      year: 'July 2025 - Present',
+      year: 'Nov 2025 - Present',
+      role: 'Full Stack Java Developer Intern',
+      company: 'SETTribe IT Solutions, Pune',
+      description: [
+      'Engineered a Java-based Tender Management System using Spring Boot and MySQL, optimizing CRUD operations and reducing manual workflow effort by 30%',
+      'Developed and maintained backend services using Spring Boot, ensuring scalable and efficient application performance.',
+      'Built and integrated RESTful APIs using Spring Boot (MVC architecture) for real-time data processing and seamless frontend–backend communication',
+      'Designed and developed responsive UI components using React.js, improving user experience and application interactivity.',
+      'Architected an Admin Dashboard for Sumruddha Sala E-Portal with dynamic stage-based status tracking for enhanced process visibility',
+      'Performed bug fixing, testing, and performance optimization to enhance system reliability and efficiency',
+      'Collaborated using Git/GitHub and actively participated in Agile development practices (daily stand-ups)'
+    ]
+  },
+    {
+      icon: <FiCode />,
+      year: 'July 2025 - Feb 2026',
       role: 'Full Stack Java Developer Trainee',
-      company: 'SEED Infotech Ltd',
+      company: 'SEED Infotech Ltd, Pune',
       description: [
       'Completed industry-oriented Full Stack Java training covering Core Java, OOPs, JDBC, Servlets, Spring Boot, Hibernate, REST APIs, MySQL, HTML, CSS, JavaScript, ReactJS, and Angular.',
       'Developed end-to-end full-stack applications from scratch, including database design, backend development, and frontend integration.',
@@ -23,6 +34,7 @@ export default function Experience() {
       'Followed SDLC and Agile practices used Git for version control and team collaboration.'
     ]
   }
+  
   ]
 
   return (
