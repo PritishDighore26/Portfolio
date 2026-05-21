@@ -9,17 +9,20 @@ export default function Experience() {
   const experiences = [
     {
       icon: <FiCode />,
-      year: 'Nov 2025 - Present',
-      role: 'Full Stack Java Developer Intern',
+      year: 'Nov 2025 - May 2026',
+      role: 'Trainee Software Engineer',
       company: 'SETTribe IT Solutions, Pune',
       description: [
-      'Engineered a Java-based Tender Management System using Spring Boot and MySQL, optimizing CRUD operations and reducing manual workflow effort by 30%',
-      'Developed and maintained backend services using Spring Boot, ensuring scalable and efficient application performance.',
-      'Built and integrated RESTful APIs using Spring Boot (MVC architecture) for real-time data processing and seamless frontend–backend communication',
-      'Designed and developed responsive UI components using React.js, improving user experience and application interactivity.',
-      'Architected an Admin Dashboard for Sumruddha Sala E-Portal with dynamic stage-based status tracking for enhanced process visibility',
-      'Performed bug fixing, testing, and performance optimization to enhance system reliability and efficiency',
-      'Collaborated using Git/GitHub and actively participated in Agile development practices (daily stand-ups)'
+      'Worked as a Full Stack Developer Trainee using React.js, Spring Boot, and DBeaver for web application development',
+      'Developed responsive frontend features and reusable UI components using React.js to improve user experience.',
+      'Created dynamic forms with validation and integrated them with backend REST APIs for seamless data handling.',
+      'Built and enhanced dashboard functionalities, including data display, user interactions, and component-based UI improvements.',
+      'Developed backend modules using Spring Boot, implementing business logic and CRUD operations.',
+      'Used DBeaver for database management, query execution, data handling, and backend database integration support.',
+      'Collaborated in a remote team environment using GitHub for version control, feature branching, issue tracking, and code management.',
+      'Debugged frontend-backend integration issues and resolved code conflicts to ensure smooth application performance.',
+      'Maintained a clean, modular project structure following good coding practices for scalability and maintainability.',
+      'Successfully delivered assigned tasks within deadlines while coordinating with the development team.'
     ]
   },
     {
